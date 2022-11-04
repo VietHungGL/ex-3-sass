@@ -1,0 +1,143 @@
+.header
+  width: 100%
+  height: auto
+  min-height: 250px
+  padding-bottom: 35px
+.header-top
+  width: 100%
+  min-width: max-content
+  .wrapper
+    display: flex
+    justify-content: space-between
+    padding-top: 50px
+    img
+      cursor: pointer
+.header-social
+  display: flex
+  column-gap: 15px
+  align-items: center
+  img
+    cursor: pointer
+.header-bottom
+  border-top: 1px solid #646161
+  margin-top: 50px
+  min-width: max-content
+  .wrapper
+    display: flex
+    padding-top: 0
+    align-items: center
+    justify-content: space-between
+.header-nav
+  display: flex
+  align-items: center
+  justify-content: space-between
+  li
+    padding-top: 30px
+    padding-bottom: 30px
+    border-right: 1px solid $text-color
+    transition: all .3s
+    position: relative
+    &:last-child
+      border: unset    
+    .nav-item
+      font-size: 13px
+      font-weight: 700
+      transition: all .3s
+      color: $text-color
+      padding: 0 20px
+      position: relative
+      &:hover
+        color: #1faae2
+        &::before
+          content: ""
+          position: absolute
+          top: 60%
+          left: 25%
+          height: 30px
+          z-index: -1
+          border-width: 35px
+          border: .2rem solid 
+          border-color: transparent transparent #1faae2 transparent
+.header-search
+  display: flex
+  align-items: center
+  column-gap: 5px
+  .form-contact
+    padding: 10px 0 10px 10px
+    background-color: #fff !important
+    border: 2px solid #fff
+    font-size: 16px
+
+
++mobile 
+  .menu
+    display: flex
+    column-gap: .15rem
+    align-items: center
+    p
+      color: #000
+      font-size: .16rem
+      font-weight: 400 
+      z-index: 4
+      margin-top: .2rem
+      letter-spacing: .01rem
+      margin-right: .02rem
+  .menu-bar
+    display: inline-block
+    z-index: 4
+    cursor: pointer
+    margin-top: .24rem
+    letter-spacing: .01rem
+    margin-right: -0.02rem
+  .bar 
+      display: block
+      width: .25rem
+      height: .03rem 
+      transition: all 0.3s ease-in-out
+      background-color: #000
+      cursor: pointer
+  .menu-bar .bar:nth-child(2)
+      margin: .05rem 0
+  .menu-bar.active .bar:nth-child(2)
+      opacity: 0
+  .menu-bar.active .bar:nth-child(1)
+      transform: translateY(.08rem) rotate(45deg)
+  .menu-bar.active .bar:nth-child(3)
+      transform: translateY(-0.08rem) rotate(-45deg) 
+  .header-bottom.active
+    transform: translateX(0)
+    display: flex
+  .header-bottom
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    transform: translate(100%)
+    width: 100%
+    height: 100vh
+    overflow-y: scroll
+    z-index: 3
+    transition: transform 0.3s
+    flex-direction: column
+    background: #000
+    justify-content: flex-start
+    align-items: start
+    padding-top: 87px
+    padding-left: 0
+    background-color: #fff
+    opacity: 0.95
+    margin-top: 0
+  .header-bottom .wrapper
+    flex-direction: column
+  .header-nav
+    flex-direction: column
+    li
+      border-right: unset
+  .header
+    padding-bottom: 0
+    min-height: auto
+  .header-top .wrapper
+    padding-bottom: .3rem
+    padding-top: .3rem
+  .header-top .wrapper img
+    width: 15%
